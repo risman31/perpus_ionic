@@ -1,0 +1,50 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    
+      <ion-title position="middle">
+          DETAIL BUKU
+      </ion-title>
+
+      <ion-buttons slot="start">
+        <ion-back-button routerLink="/home"></ion-back-button>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="medium">
+
+<ion-card>        
+<ion-card-content>
+  <div class="table-responsive">
+    <table class="table table-striped">
+      <thead class="table mb-0"> 
+        <tr>
+          <th>No</th>
+            <th>Kode Buku</th>
+            <th>Judul</th>
+            <th>Kode Jenis Buku</th>
+            <th>Penerbit</th>
+            <th>Pengarang</th>
+            <th>Tahun Buku</th>
+            <th>Stok</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let tbl_buku of GETBuku; let i=index;">
+          <td>{{i+1}}</td>
+          <td>{{tbl_buku.buku_id}}</td>
+          <td>{{tbl_buku.title}}</td>
+          <td>{{tbl_buku.id_kategori}}</td>
+          <td>{{tbl_buku.penerbit}}</td>
+          <td>{{tbl_buku.pengarang}}</td>
+          <td>{{tbl_buku.thn_buku}}</td>
+          <td>{{tbl_buku.jml}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+    
+  </ion-card-content>
+</ion-card>
+</ion-content>
